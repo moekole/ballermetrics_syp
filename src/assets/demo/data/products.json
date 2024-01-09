@@ -1,0 +1,36 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "team1": "Lakers",
+            "team2": "Runnrs",
+            "date": "17.07.2023",
+            "image": "team1.jpeg",
+            "price": 65,
+            "place": "London",
+            "status": "Hot",
+            "rating": "5/10"
+        },
+        {
+            "id": "2",
+            "team1": "Ballers",
+            "team2": "Chillers",
+            "date": "01.01.2023",
+            "image": "Team2.jpeg",
+            "price": 65,
+            "place": "Miami",
+            "status": "Hot",
+            "rating": "7/10"
+        },
+        {
+            "id": "3",
+            "team1": "Mevricks",
+            "team2": "Kendricks",
+            "date": "21.10.2023",
+            "image": "team3.jpg",
+            "price": 65,
+            "place": "Los Angeles",
+            "status": "Hot",
+            "rating": "10/10"
+        }
+    ]}

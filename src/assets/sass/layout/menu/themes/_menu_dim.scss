@@ -1,0 +1,20 @@
+.layout-menu-dim {
+    $menuBgColor:#252525;
+    $menuShadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+
+    $rootMenuTextColor:#CDD2DB;
+
+    $rootMenuItemTextColor:#E5E8EC;
+    $rootMenuItemHoverBgColor:#393939;
+    $activeRootMenuItemTextColor:#ffffff;
+    $menuItemIconColor:#E5E8EC;
+
+    $submenuItemTextColor:#E5E8EC;
+    $submenuItemHoverBgColor:#393939; 
+    $activeSubmenuItemTextColor:#ffffff;
+
+    $externalSubmenuBgColor:lighten(#3C4962, 3%);
+
+    @import '../_menu_theme';
+}
+
