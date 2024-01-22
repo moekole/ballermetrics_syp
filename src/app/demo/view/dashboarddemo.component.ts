@@ -68,6 +68,23 @@ export class DashboardDemoComponent implements OnInit {
         this.productService.getProducts().then(data => this.productsThisWeek = data);
         this.productService.getProductsMixed().then(data => this.productsLastWeek = data);
 
+        var options = {
+            method: 'GET'
+          };
+
+          
+          fetch("http://localhost:3000/teams/newest", options)
+            .then(response => response.text())
+            .then(result => {
+                console.log(result);
+                this.showPlayer(result);
+            })
+            .catch(error => console.log('error', error));
+
+            
+
+
+
         this.ordersChart = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September'],
             datasets: [{
@@ -152,6 +169,19 @@ export class DashboardDemoComponent implements OnInit {
             {name: 'This Week', code: '0'},
             {name: 'Last Week', code: '1'}
         ];
+    }
+
+    showPlayer(result:any)
+    {
+        console.log("drinnen");
+        console.log(result);
+
+        var output = "";
+
+        console.log(result[0]);
+
+        
+        
     }
 
     getTrafficChartData() {
@@ -293,4 +323,5 @@ export class DashboardDemoComponent implements OnInit {
             this.subscription.unsubscribe();
         }
     }
+
 }

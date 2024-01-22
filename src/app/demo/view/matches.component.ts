@@ -53,6 +53,19 @@ export class MatchesComponent {
             {label: 'Price High to Low', value: '!price'},
             {label: 'Price Low to High', value: 'price'}
         ];
+
+        var options = {
+            method: 'GET'
+          };
+
+          
+          fetch("http://localhost:3000/teams/getPlayers/Pistons", options)
+            .then(response => response.text())
+            .then(result => {
+                console.log(result);
+                this.showNewestGame(result);
+            })
+            .catch(error => console.log('error', error));
     }
 
     onSortChange(event) {
@@ -65,6 +78,11 @@ export class MatchesComponent {
             this.sortOrder = 1;
             this.sortField = value;
         }
+    }
+
+    showNewestGame(json:any)
+    {
+        console.log("Erstes objekt"+json[1]);
     }
 
 }
